@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <title>Visual Output</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="bg">
+        <p class="ab">Task 2</p>
+        <div class="err_con">
+            <p id="tit">Request Body We Send :</p>
+            <div class="json-data reqv">
+                <pre>
+{
+    <span id="req" class="<%= errors.name ? 'error' : '' %>"><b id="key">"name": </b>"<%= name %>"</span>
+    <span id="req" class="<%= errors.email ? 'error' : '' %>"><b id="key">"email": </b>"<%= email %>"</span>
+    <span id="req" class="<%= errors.password ? 'error' : '' %>"><b id="key">"password":</b>"<%= password %>"</span> 
+}
+                </pre>
+            </div>
+        </div>
+        <div class="err_con">
+            <p id="tit">Response we got :</p>
+            <div class="json-data resv">
+                <% if (errors.name || errors.email || errors.password) { %>
+                    <div id="res" class="error-line">
+                        <b>"Error":&nbsp;</b>
+                        <p><%= errors.name %></p>
+                        <p><%= errors.email %></p>
+                        <p><%= errors.password %></p>
+                    </div>
+                <% } else { %>
+                    <p id="res" class="success-line" style="color: green;"><b style="color: green;">"Message": &nbsp;</b>Your Response Submitted Successfully <b>!</b></p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

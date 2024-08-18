@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+</head>
+
+<body>
+    <div id="app">
+        <p><a href="/">client page</a></p>
+        <div class="btns">
+            <button class="btn1 btn">Create</button>
+            <button onclick="redirectToReadPage()" class="btn2 btn">Read</button>
+            <button class="btn3 btn">Update</button>
+            <button class="btn4 btn">Delete</button>
+
+        </div>
+        <!-- <pre id="result"></pre> -->
+    </div>
+    <div class="forms">
+        <form action="" method="post" id="userForm'">
+            <!-- Name -->
+            <div class="name">
+                <label for="name">Name</label><br>
+                <input class="ort" type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="email">
+                <label for="email">Email</label><br>
+                <input class="ort" type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Branch -->
+            <div class="branch">
+                <label for="branch">Branch</label><br>
+                <select class="ort" id="branch" name="branch" required>
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CSEDS">CSEDS</option>
+                    <option value="CSE AI">CSE AI</option>
+                    <option value="CSE ML">CSE ML</option>
+                    <option value="CSEIT">CSEIT</option>
+                    <option value="CSET">CSET</option>
+                </select>
+            </div>
+
+            <!-- Mobile No. -->
+            <div class="num">
+                <label for="mobile">Mobile No.</label><br>
+                <input class="ort" type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="gender">
+                <label for="gender">Gender</label><br>
+                <div class="or ort">
+                    <div class="r1">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label><br>
+                    </div>
+                    <div class="r2">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                    </div>
+
+                    <div class="r3">
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label><br><br>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- Address -->
+            <div class="add">
+                <label for="address">Address:</label><br>
+                <textarea class="ort" id="address" name="address" rows="4" cols="50" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button onclick="userc()" id="btn8" class="btn8" type="submit" value="Submit">create</button>
+        </form>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- <script type="module" src="./main.js"></script> -->
+    <script src="../script/create.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

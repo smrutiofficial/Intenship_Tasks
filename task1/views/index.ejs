@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 (form submition on server side rendeing )</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="bg">
+    <p class="ab">Task 1</p>
+    <div class="from">
+      <div class="container">
+        <div class="form_area">
+          <p class="title">FORM SUBMITTION</p>
+          <form action="/result" method="post">
+            <div class="form_group">
+              <label class="sub_title" for="name">Name</label>
+              <input placeholder="Enter your full name" class="form_style" type="text" name="name">
+            </div>
+            <div class="form_group">
+              <label class="sub_title" for="email">Email</label>
+              <input placeholder="Enter your email" id="email" class="form_style" type="email" name="email">
+            </div>
+            <div class="form_group">
+              <label class="sub_title" for="gender">Gender</label>
+              <div class="radio">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="others" name="gender" value="others" required>
+                <label for="female">Others</label>
+              </div>
+            </div>
+            <div class="form_group">
+              <label class="sub_title" for="department">Department</label>
+              <select id="department" name="department" required>
+                <option value="hr">HR</option>
+                <option value="it">IT</option>
+                <option value="sales">Sales</option>
+                <option value="marketing">Marketing</option>
+              </select>
+            </div>
+            <div>
+              <button class="btn">Submit</button>
+              </a>
+            </div><a class="link" href="">
+
+            </a>
+          </form>
+        </div><a class="link" href="">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

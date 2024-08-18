@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="stylesheet" href="./src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <p><a href="/">client page</a></p>
+      <div class="btns">
+        <button onclick="window.location.href='./src/pages/create.html'" class="btn1 btn">Create</button>
+        <button onclick="window.location.href='./src/pages/read.html'" class="btn2 btn">Read</button>
+        <button onclick="window.location.href='./update.html'" class="btn3 btn">Update</button>
+        <button onclick="window.location.href='./delete.html'" class="btn4 btn">Delete</button>
+
+      </div>
+      <pre id="result"></pre>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/script/featch.js"></script>
+    <script src="./src/script/create.js"></script>
+  </body>
+</html>
