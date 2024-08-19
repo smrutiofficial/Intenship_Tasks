@@ -142,6 +142,9 @@ section {
     align-items: center;
     justify-content: space-around; */
     height: 12%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
     gap: 7rem;
     font-weight: 600;
     font-size: large;
@@ -590,107 +593,6 @@ footer .footer-section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsive Adjustments for Mobile & Tablet */
 @media (max-width: 1024px) {
 
@@ -914,10 +816,16 @@ footer .footer-section {
         font-weight: 600;
         font-size: large;
         display: flex;
+        justify-content: start;
+        align-items: start;
+
     }
 
     .social {
+        scale: 0.8;
         flex-direction: column;
+        justify-content: start;
+        align-items: start;
         margin-left: 2rem;
         transform: translateY(2rem);
     }
