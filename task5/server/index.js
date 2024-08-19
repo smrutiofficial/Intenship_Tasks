@@ -1,32 +1,23 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+// index.js
+const express = require('express');
+const connectDB = require('./db/connection');
+// const authRoutes = require('./routers/auth.router'); // Import the auth routes
 const app = express();
-var cors = require("cors");
-require("dotenv").config();
-app.use(cors());
+require('dotenv').config(); // Load environment variables
 
-const port = process.env.PORT || 3000;
-const API_KEY = process.env.API_KEY;
-const checkApiKey = (req, res, next) => {
-  const apiKey = req.headers["x-api-key"];
+// Connect to MongoDB
+connectDB();
 
-  if (apiKey === API_KEY) {
-    next();
-  } else {
-    return res.status(403).json({ message: "Invalid user operation" });
-  }
-};
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// Middleware to parse JSON requests
+app.use(express.json());
 
-const userRoutes = require("./routers/user.routes.js");
-app.get("/", (req, res) => {
-  res.send("REST API Conneted Successfully ....");
-});
-app.use("/user", userRoutes);
-// app.use("/user", checkApiKey, userRoutes);
+// Importing routers
+const authRoutes = require('./routers/auth.router'); // Routes for registration and login
+const userRoutes = require('./routers/user.router'); // Protected routes for user actions
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+// Define routes
+app.use('/api/auth', authRoutes); // Use auth router (unprotected routes)
+app.use('/api/user', userRoutes); // Use user router (protected routes)
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
