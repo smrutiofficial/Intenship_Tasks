@@ -1,8 +1,6 @@
-// routers/auth.js
-
 const express = require('express');
 const router = express.Router();
-const authController = require('../controllers/auth.controller'); // Controller that handles register and login
+const authController = require('../controllers/auth.controller');
 
 // POST request for registering a user
 router.post('/register', authController.register);
